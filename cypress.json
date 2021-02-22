@@ -1,13 +1,13 @@
 {
     "defaultCommandTimeout": 10000,
-    "chromeWebSecuirty": false,
+    "chromeWebSecurity": false,
     "reporter":"mochawesome",
     "retries":{
   
       "runMode":1
     },
     "env": {
-      "url": "http://automationpractice.com/index.php"
+      "url": "http://automationpractice.com/index.php/"
     },
-    "projectId": "ymnoik"
+    "projectId": "22844s"
   }

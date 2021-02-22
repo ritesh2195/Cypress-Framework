@@ -24,6 +24,11 @@ class HomePage{
 
         return new LoginPage()
     }
+
+    navigateToSignUpPage(){
+
+        cy.get(this.#SignIn).click()
+    }
 }
 
 export default HomePage;

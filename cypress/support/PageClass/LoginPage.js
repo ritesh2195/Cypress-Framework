@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import SignUpPage from "../PageClass/SignUpPage"
 
 class LoginPage{
 
@@ -7,6 +8,10 @@ class LoginPage{
     #Password = '#passwd'
 
     #Submit = '#SubmitLogin'
+
+    #EmailCreate = '#email_create'
+
+    #SubmitCreate = '#SubmitCreate'
 
     #AccountInfo = '.account span'
 
@@ -44,6 +49,16 @@ class LoginPage{
         cy.contains('My personal information').click()
 
         return cy.get(this.#LoginEmail)
+    }
+
+    createSignUpEmail(emailId){
+
+        cy.get(this.#EmailCreate).type(emailId)
+
+        cy.get(this.#SubmitCreate).click()
+
+        return new SignUpPage()
+
     }
 }
 export default LoginPage;
