@@ -64,7 +64,6 @@ class SignUpPage{
 
             cy.get(this.#Gender_Female).click()
         }
-
     }
 
     enterName(first_Name, last_Name){
@@ -84,7 +83,7 @@ class SignUpPage{
 
         cy.get(this.#Date).select(date)
 
-        cy.get(this.#Month).select(month)
+        cy.get(this.#Month).select(month,{force: true})
 
         cy.get(this.#Year).select(year)
 

@@ -1,7 +1,9 @@
 {
-    "defaultCommandTimeout": 150000,
+    "defaultCommandTimeout": 10000,
     "chromeWebSecurity": false,
     "reporter":"mochawesome",
+    "modifyObstructiveCode": true,
+    "experimentalSourceRewriting": true,
     "retries":{
   
       "runMode":1

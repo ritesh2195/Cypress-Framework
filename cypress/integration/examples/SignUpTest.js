@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 import HomePage from "../../support/PageClass/HomePage";
 import LoginPage from "../../support/PageClass/LoginPage"
-import SignUpPage from "../../support/PageClass/SignUpPage"
 
 describe('SignUp Test', function(){
 
@@ -25,21 +24,21 @@ describe('SignUp Test', function(){
 
         const signUpPage = loginPage.createSignUpEmail(this.data.email)
 
-        signUpPage.enterGender(this.date.gender)
+        signUpPage.enterGender(this.data.gender)
 
-        signUpPage.enterName(this.date.firstName, this.date.lastName)
+        signUpPage.enterName(this.data.firstName, this.data.lastName)
 
         signUpPage.enterPassword(this.data.password)
 
         signUpPage.selectDateOfBirth(this.data.date, this.data.month, this.data.year)
 
-        signUpPage.enterCompanyName(this.date.companyName)
+        signUpPage.enterCompanyName(this.data.companyName)
 
         signUpPage.enterAddress(this.data.address)
 
         signUpPage.enterCityName(this.data.cityName)
 
-        signUpPage.selectStateName(this.date.stateName)
+        signUpPage.selectStateName(this.data.stateName)
 
         signUpPage.enterZipCode(this.data.zipCode)
 
@@ -55,6 +54,6 @@ describe('SignUp Test', function(){
 
         signUpPage.verifySignUpTest().should('have.text', this.data.firstName+' '+this.data.lastName)
 
-        signUpPage.verifySignUpEmail().should('have.text', this.data.email)
+        signUpPage.verifySignUpEmail().should('have.value', this.data.email) 
     })
 })
