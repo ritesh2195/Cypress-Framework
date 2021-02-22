@@ -47,7 +47,7 @@ describe('Search Test', function(){
 
                 var price1 = Number(price.replace(/[^0-9\.]+/g,""))
 
-                expect(totalPrice1).to.eql(2*price1)
+                expect(totalPrice1).to.eql(this.data.no*price1)
 
                 summaryPage.getShipingPrice().invoke('text').then(function(Text){
 
