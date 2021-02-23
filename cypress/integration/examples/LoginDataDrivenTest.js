@@ -33,7 +33,7 @@ describe('Login Test', function(){
     
                     loginPage.verifyLoginEmail().should('have.value', user.email)
     
-                    cy.get("a[title='Log me out']").click()
+                    loginPage.clickLogout()
     
                 }
 
@@ -41,7 +41,7 @@ describe('Login Test', function(){
 
                     loginPage.verifyURL().should('include','authentication')
 
-                    cy.get('ol > li').should('include.text', 'Authentication failed.')
+                    loginPage.verifyInvalidCredentialsMessage().should('include.text', 'Authentication failed.')
 
                 }
 

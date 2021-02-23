@@ -19,6 +19,10 @@ class LoginPage{
 
     #Message = '.info-account'
 
+    #Logout = "a[title='Log me out']"
+
+    #InvalidDataMessage = 'ol > li'
+
     doLogin(email, password){
 
         cy.get(this.#Email).type(email)
@@ -26,6 +30,16 @@ class LoginPage{
         cy.get(this.#Password).type(password)
 
         return cy.get(this.#Submit).click()
+    }
+
+    clickLogout(){
+
+        cy.get(this.#Logout).click()
+    }
+
+    verifyInvalidCredentialsMessage(){
+
+        return cy.get(this.#InvalidDataMessage)
     }
 
     verifyLoginTest(){
