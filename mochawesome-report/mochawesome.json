@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-02-21T17:47:39.353Z",
-    "end": "2021-02-21T17:48:20.794Z",
-    "duration": 41441,
+    "start": "2021-02-23T09:48:42.264Z",
+    "end": "2021-02-23T09:49:58.521Z",
+    "duration": 76257,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "cb9a2d98-11e6-420e-b822-eafd3ac772a3",
+      "uuid": "4efcbabb-42b9-4e1b-abb1-b1d684735dcc",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\LoginTest.js",
       "file": "cypress\\integration\\examples\\LoginTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6a509f47-e3e3-45b4-8199-c75f5d8365d8",
+          "uuid": "3edaa76b-d0d2-4c13-aa18-ec32cc318dec",
           "title": "Login Test",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login Test with valid credentials",
               "fullTitle": "Login Test Login Test with valid credentials",
               "timedOut": null,
-              "duration": 31323,
+              "duration": 57126,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "var homePage = new _HomePage[\"default\"]();\nhomePage.naviagateToHomePage();\nvar loginPage = homePage.navigateToSignInPage();\nloginPage.doLogin(this.data.email, this.data.password);\nloginPage.verifyURL().should('include', 'my-account');\nloginPage.verifyLoginMessage().should('include.text', 'Welcome to your account.');\nloginPage.verifyLoginTest().should('have.text', this.data.name);\nloginPage.verifyLoginEmail().should('have.value', this.data.email);",
               "err": {},
-              "uuid": "f26c26cb-ba86-4d08-8509-9040ea5eacb0",
-              "parentUUID": "6a509f47-e3e3-45b4-8199-c75f5d8365d8",
+              "uuid": "703b0e2f-770b-49b0-94cf-312d88e808ca",
+              "parentUUID": "3edaa76b-d0d2-4c13-aa18-ec32cc318dec",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f26c26cb-ba86-4d08-8509-9040ea5eacb0"
+            "703b0e2f-770b-49b0-94cf-312d88e808ca"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31323,
+          "duration": 57126,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
