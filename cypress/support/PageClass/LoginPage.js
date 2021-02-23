@@ -25,7 +25,7 @@ class LoginPage{
 
         cy.get(this.#Password).type(password)
 
-        cy.get(this.#Submit).click()
+        return cy.get(this.#Submit).click()
     }
 
     verifyLoginTest(){

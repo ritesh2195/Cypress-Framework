@@ -1,0 +1,19 @@
+[
+    {
+
+    "email": "rrsdm@gmail.com",
+    "password":"qwerty",
+    "name":"vinit kumar",
+    "expectedResult":"Fail"
+
+    },
+
+    {
+
+    "email": "rrm@gmail.com",
+    "password":"qwerty",
+    "name":"vinit kumar",
+    "expectedResult":"Pass"
+
+    }
+]
