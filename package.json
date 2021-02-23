@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "dashBoard":"npm run test -- --record --key f4c4eb3d-455f-4133-9634-4b0d924a5aa8 --headed --browser chrome"
+    "dashBoard": "npm run test -- --record --key key --headed --browser chrome"
   },
   "author": "Ritesh",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.5.0",
+    "cypress-file-upload": "^5.0.2",
     "mocha": "^8.3.0",
     "mochawesome": "^6.2.2"
   }

@@ -1,0 +1,22 @@
+@Given("^I navigate to omayo website$")
+public void i_navigate_to_omayo_website() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@When("^I enter Username as ritesh and Password as jdbunsnj into the fields$")
+public void i_enter_Username_as_ritesh_and_Password_as_jdbunsnj_into_the_fields() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@When("^I click on Login button$")
+public void i_click_on_Login_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+@Then("^User should login based on expected failure status$")
+public void user_should_login_based_on_expected_failure_status() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();

@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import LoginPage from "../PageClass/LoginPage"
+import ContactUsPage from '../PageClass/ContactUsPage'
 class HomePage{
 
     #ConstactUs = "a[title='Contact Us']"
@@ -13,9 +14,11 @@ class HomePage{
         cy.visit(Cypress.env('url'))
     }
 
-    navigateToConstactUsPage(){
+    navigateToContactUsPage(){
 
         cy.get(this.#ConstactUs).click()
+
+        return new ContactUsPage()
     }
 
     navigateToSignInPage(){
