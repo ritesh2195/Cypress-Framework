@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import HomePage from '../../support/PageClass/HomePage'
+import PageClassManager from '../../support/Manager/PageClassManager'
 
 describe('ContactUs Test', function(){
 
@@ -16,11 +16,15 @@ describe('ContactUs Test', function(){
 
         const file = 'abc.txt'
 
-        const homePage = new HomePage()
+        const manager = new PageClassManager()
+
+        const homePage = manager.getHomePage()
 
         homePage.naviagateToHomePage()
 
-        const contactPage = homePage.navigateToContactUsPage()
+        homePage.navigateToContactUsPage()
+
+        const contactPage = manager.getContactUsPage()
 
         contactPage.selectSubjectHeading(this.data.heading)
 

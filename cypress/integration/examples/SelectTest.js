@@ -1,6 +1,10 @@
-import HomePage from "../../support/PageClass/HomePage";
-import SelectPage from '../../support/PageClass/SelectPage'
-import SummaryPage from '../../support/PageClass/SummaryPage'
+/// <reference types="cypress" />
+import PageClassManager from '../../support/Manager/PageClassManager'
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false;
+  });
+
 describe('Search Test', function(){
 
     beforeEach('fixture', function(){
@@ -13,11 +17,13 @@ describe('Search Test', function(){
 
     it('Select item', function(){
 
-        const homePage = new HomePage()
+        const manager = new PageClassManager()
 
-        const selectPage = new SelectPage()
+        const homePage = manager.getHomePage()
 
-        const summaryPage = new SummaryPage()
+        const selectPage = manager.getSelectPage()
+
+        const summaryPage = manager.getSummaryPage()
 
         homePage.naviagateToHomePage()
 

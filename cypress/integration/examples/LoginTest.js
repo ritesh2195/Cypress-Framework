@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import HomePage from "../../support/PageClass/HomePage";
+import PageClassManager from '../../support/Manager/PageClassManager'
 
 describe('Login Test', function(){
 
@@ -13,11 +13,15 @@ describe('Login Test', function(){
 
     it('Login Test with valid credentials', function(){
 
-        const homePage = new HomePage()
+        const manager = new PageClassManager()
+
+        const homePage = manager.getHomePage()
+
+        const loginPage = manager.getLoginPage()
 
         homePage.naviagateToHomePage()
 
-        const loginPage =homePage.navigateToSignInPage()
+        homePage.navigateToSignInPage()
 
         loginPage.doLogin(this.data.email, this.data.password)
 

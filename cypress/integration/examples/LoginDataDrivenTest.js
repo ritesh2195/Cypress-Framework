@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
-import HomePage from "../../support/PageClass/HomePage";
-
+import PageClassManager from '../../support/Manager/PageClassManager'
 describe('Login Test', function(){
 
     beforeEach('fixture',function(){
@@ -15,11 +14,15 @@ describe('Login Test', function(){
 
         this.data.forEach(user=>{
 
-            const homePage = new HomePage()
+            const manager = new PageClassManager()
+
+            const homePage = manager.getHomePage()
 
             homePage.naviagateToHomePage()
 
-            const loginPage =homePage.navigateToSignInPage()
+            homePage.navigateToSignInPage()
+
+            const loginPage = manager.getLoginPage()
 
             loginPage.doLogin(user.email, user.password).then(function(){
 

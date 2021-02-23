@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
-import HomePage from "../../support/PageClass/HomePage";
-import LoginPage from "../../support/PageClass/LoginPage"
+import PageClassManager from '../../support/Manager/PageClassManager'
 
 describe('SignUp Test', function(){
 
@@ -14,15 +13,19 @@ describe('SignUp Test', function(){
 
     it('SignUp Test with valid details', function(){
 
-        const homePage = new HomePage()
+        const manager = new PageClassManager()
 
-        const loginPage = new LoginPage()
+        const homePage = manager.getHomePage()
+
+        const loginPage = manager.getLoginPage()
+
+        const signUpPage = manager.getSignUpPage()
 
         homePage.naviagateToHomePage()
 
         homePage.navigateToSignUpPage()
 
-        const signUpPage = loginPage.createSignUpEmail(this.data.email)
+        loginPage.createSignUpEmail(this.data.email)
 
         signUpPage.enterGender(this.data.gender)
 

@@ -54,7 +54,9 @@ class SelectPage{
             cy.get(this.#ColorPick).eq(1).click()
         }
 
-        cy.contains('Add to cart').click()
+        cy.get("button[name='Submit']").click()
+
+        cy.wait(2000)
     }
 
     proceedToCheckout(){
